@@ -1,0 +1,197 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <div class="header">
+
+        </div>
+        <div class="container text-center"> <!--Căn giữa trang-->
+            <div class="menu" style="background-color:white;">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="~/Images/LOGO.PNG" width="200" height="80" class="rounded" /></a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">                         
+                            <input class="form-control mr-2 w-50" type="search" placeholder="Nhập mã hoặc tên sản phẩm.." aria-label="Search">
+                            <button class="btn btn-link" type="submit" ><img src="Images/search.png" /></button>
+                  </div>
+                 <a class="navbar-brand row"><img src="Images/background.PNG" width="350" height="80" class="rounded"/></a>
+                </div>
+            </nav>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light" >
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0" >
+                                <li class="nav-item nav-link" >
+                                    <a href="#"  style="color:black;" >
+                                        <img src="~/Images/home.jpg"/><b>  Trang Chủ</b></a>
+                                    @*@Html.ActionLink("Trang Chủ", "SachPatial", "Sach")*@
+                                </li>
+                                <li class="nav-item nav-link">
+                                    <a href="#"  style="color:black;" >
+                                        <img src="~/Images/default.PNG"/><b>  Đăng Nhập</b></a>
+                                    @*@Html.ActionLink("Đăng Nhập", "DangNhap", "Paper")*@
+                                </li>
+                                <li class="nav-item nav-link">
+                                    <a href="#"  style="color:black;" >
+                                        <img src="~/Images/ImgDK.jpg"/><b>  Đăng Ký</b></a>
+                                   @*@Html.ActionLink("Đăng Ký", "DangKy", "Paper")*@
+                                </li>
+                        <li class="nav-item nav-link">
+                            <a href="#"  style="color:black;" >
+                                        <img src="~/Images/computerchip.png"/><b>  Linh Kiện</b></a>
+                                    @*@Html.ActionLink("Linh Kiện  ", "LienHe", "Paper")*@
+                                </li> 
+                        <li class="nav-item nav-link">
+                            <a href="#"  style="color:black;">
+                                        <img src="~/Images/sale.png"/><b>  Khuyến Mãi</b></a>
+                                    @*@Html.ActionLink("Khuyến Mãi  ", "LienHe", "Paper")*@
+                                </li> 
+                                <li class="nav-item nav-link">
+                                    <a href="#"  style="color:black;" >
+                                        <img src="~/Images/contact.jpg"/><b>  Liên Hệ</b></a>
+                                    @*@Html.ActionLink("Liên Hệ  ", "LienHe", "Paper")*@
+                                </li>
+                                       
+                            </ul>
+                </div>
+            <div class="card"  style="background-color:white;">
+                <div class="row">
+                    <div class ="col">
+                        <div id="carouselExampleControls" class="carousel w-100 mx-auto mt-3" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/Images/Hinh1.jpg" class="d-block w-100 " alt="Hình 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/Images/Hinh2.png" class="d-block w-100" alt="Hình 2" />
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div>             
+                </div>
+                </div>
+        <!-- </div> -->
+        <!--CONTAIN-->
+        <div class="row">
+            <div class="col col-md-3 card">
+                @Html.Action("NSXPartial","NSX")
+                @Html.Action("LOAIPartial","LOAI")
+                @*<ul class="list-group list-group-flush text-left">
+                    <li class="list-group-item" style="background-color:red;"><a href="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight:bold;">Laptop Theo Loại</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Laptop Gaming</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Laptop Văn phòng</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Laptop Doanh Nhân</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Laptop Sinh Viên</a></li>             
+                </ul>*@
+                @*<ul class="list-group list-group-flush text-left">
+                    <li class="list-group-item" style="background-color:red;"><a href="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight:bold;">Laptop Theo Hãng</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 2</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 3</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 4</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 5</a></li>
+                    
+                </ul> *@   
+            </div>
+            
+            </div>
+       
+            <p></p>
+       <div class="footer">
+       <div class="row" style="border-top: 2px solid red;padding-top:10px; text-align:left">
+        <div class="col-3">
+            <h6>Thông tin liên hệ</h6>
+            <p style="color:red; font-size:12pt">Ngô Văn Mười <br />
+               2001181212 <br />
+               09DHTH3
+            </p>
+        </div>
+        <div class="col-3">
+            <h6>Hỗ trợ khách hàng</h6>
+            <ul style="color:red; font-size:11pt">
+                <li><a href="#" style="color:red;">Hướng dẫn đặt mua sản phẩm</a></li>
+                <li><a href="#" style="color:red;">Hướng dẫn mua trả góp</a></li>
+            </ul>
+        </div>
+           <div class="col-3">
+            <h6>Kênh xã hội</h6>
+               <img src="~/Images/footer_facebook.png" /> <br />
+               <img src="~/Images/footer_youtube.png" />
+        </div>
+           <div class="col-3">
+               <img src="~/Images/da-dang-ky.png" /> <br />
+               <img src="~/Images/KL_webnew2018_file-14.png" />
+           </div>
+           <div style="text-align:center;">
+               <img src="~/Images/BigLoGo.PNG" width="60%" />
+               
+           </div>       
+           <div class="row" style="text-align:center; padding-top:30px;">
+                <div class="col-4">
+                    <p>
+                        <img src="~/Images/Address.png" width="10%" />Trụ sở chính <br />
+                        140 Lê Trọng Tấn,<br />
+                        Tây Thạnh, Tân Phú, Tp.HCM
+                    </p>
+                </div>
+               <div class="col-4">
+                    <p>
+                        <img src="~/Images/Address.png" width="10%" />Chi nhánh 1<br />
+                        67 Phạm Ngọc Thảo,<br />
+                        Tây Thạnh, Tân Phú, Tp.HCM
+                    </p>
+                </div>
+               <div class="col-4">
+                    <p>
+                        <img src="~/Images/Address.png" width="10%" />Trung tâm bảo hành <br />
+                        140 Lê Trọng Tấn,<br />
+                        Tây Thạnh, Tân Phú, Tp.HCM
+                    </p>
+                </div>
+           </div>
+           <div class="row" style="text-align:center; padding-top:30px">
+               <div class="col-6">
+                   <img src="~/Images/phone.png" width="8%"/><b>039 241 9643</b>
+               </div>
+               <div class="col-6">
+                   <img src="~/Images/Websites.png" width="5%" /> mlaptop.com
+               </div>
+           </div>
+           
+    </div> 
+           <div style="text-align:center; padding-top:20px">
+             <p>Công ty TNHH Thương Mại và Dịch Vụ MLaptop<br />
+          Địa chỉ: 140 Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Tp.HCM. ĐT: 0392419643 Mail: ngovanmuoi224@gmail.com 
+             </p>
+        </div>
+        </div>
+      </div>
+            
+           
+</div>
+</body>
+</html>

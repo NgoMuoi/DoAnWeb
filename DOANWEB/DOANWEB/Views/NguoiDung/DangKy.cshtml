@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/SHARE/USERLAYOUT.cshtml";
+}
+
+<h2>Đăng Ký Tài Khoản</h2>
+<table class="table">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        {
+            <tr>
+                <td style="text-align:right;">Họ Tên Khách Hàng</td>
+                <td>@Html.TextBox("HotenKH","",new{@class="form-control"})@ViewData["loi1"]</td>
+            </tr>
+        <tr>
+            <td style="text-align:right;">Tên Đăng Nhập</td>
+            <td>@Html.TextBox("TenDN","",new{@class="form-control"})@ViewData["loi2"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Mật Khẩu</td>
+            <td>@Html.TextBox("MatKhau","",new{@class="form-control"})@ViewData["loi3"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Nhập Lại Mật Khẩu</td>
+            <td>@Html.TextBox("ReMatKhau","",new{@class="form-control"})@ViewData["loi4"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Điện Thoại</td>
+            <td>@Html.TextBox("DienThoai","",new{@class="form-control"})@ViewData["loi5"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Ngày Sinh</td>
+            <td><input type="date" name="NgaySinh" style="width:400px" class="form-control"</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Giới Tính</td>
+            <td><input type="text" name="GioiTinh" style="width:400px" class="form-control"</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Email</td>
+            <td><input type="text" name="Email" style="width:400px" class="form-control" /></td>
+        </tr>
+         <tr>
+            <td style="text-align:right;">Địa Chỉ</td>
+            <td><input type="text" name="Diachi" style="width:400px" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-outline-danger" value="Đăng Ký"/>
+            </td>
+            <td>
+                <input class="btn btn-outline-danger"  type="reset" value="Nhập lại">
+            </td>
+        </tr>
+    }
+ }
+</table>

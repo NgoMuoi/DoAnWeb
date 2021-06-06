@@ -1,0 +1,15 @@
+﻿@using DOANWEB.Models;
+@model List<DOANWEB.LOAI>
+
+<ul class ="list-group list-group-flush text-left">
+    <li class="list-group-item" style="background-color:red;"><a href ="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight: bold">LAPTOP THEO NHU CẦU</a></li>
+    @{
+        foreach (var item in Model)
+        {
+            <li class="list-group-item">
+                <a href="@Url.Action("LAPTOPTHEOLOAI","LOAI", new {@ML = item.MALOAI})" style="text-transform:uppercase; text-decoration:none; color:black;">@item.TENLOAI</a>
+            </li>
+        }
+        <li class="list-group-item"><a href="#" style="text-transform:uppercase;text-decoration:none;"></a></li>
+    }
+</ul>

@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "KhuyenMai";
+    Layout = "~/Views/SHARE/USERLAYOUT.cshtml";
+}
+
+<h2>Thông Tin Khuyến Mãi</h2>
+
+<div class="row">
+    <table class="table">
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+            <td width="22%"><img src="~/HinhAnhSP/@item.HINHANH" width="50%" /></td>
+            <td width="12%"><b>@item.TIEUDE</b></td>
+             <td width="12%">@item.NOIDUNG</td>    
+            </tr>
+        }             
+      }
+        </table>
+</div>

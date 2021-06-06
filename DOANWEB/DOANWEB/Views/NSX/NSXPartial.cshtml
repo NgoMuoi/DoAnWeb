@@ -1,0 +1,16 @@
+﻿
+@using DOANWEB.Models;
+@model List<DOANWEB.NSX>
+
+<ul class ="list-group list-group-flush text-left">
+    <li class="list-group-item" style="background-color:red;"><a href ="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight: bold">LAPTOP THEO HÃNG</a></li>
+    @{
+        foreach (var item in Model)
+        {
+            <li class="list-group-item">
+                <a href="@Url.Action("LAPTOPTHEONSX","NSX", new {@maNSX = item.MANSX})" style="text-transform:uppercase; text-decoration:none; color:black;">@item.TENNSX</a>
+            </li>
+        }
+        <li class="list-group-item"><a href="#" style="text-transform:uppercase;text-decoration:none;"></a></li>
+    }
+</ul>

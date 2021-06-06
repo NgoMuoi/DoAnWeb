@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/SHARE/USERLAYOUT.cshtml";
+}
+
+<h2>Chi Tiết Sản Phẩm</h2>
+<div class="card border-dark">
+    <table class="border-dark mx-3 mt-3">
+        <tr class="text-left">
+            <td rowspan="5" width="45%">
+                <img class="card-header" src="@Url.Content("~/HinhAnhSP/"+Model.HINHANH)" width="100%" height="100%" alt="Image" />
+            </td>
+            <td width="20%">Laptop </td>
+            <td width="30%" style="font-weight:bold; color:blue">@Model.TENSP</td>
+        </tr>
+        <tr class="text-left">
+            <td >Hãng Sản Xuất:</td>
+            <td style="color:blue">@Model.NSX.TENNSX</td>
+        </tr>
+        <tr class="text-left">
+            <td >LOẠI:</td>
+            <td style="color:blue">@Model.LOAI.TENLOAI</td>
+        </tr>
+        <tr class="text-left">
+            <td >Nội Dung:</td>
+            <td class="text-justify">@Model.MOTA</td>
+        </tr>
+        <tr class="text-left">
+            <td >Giá Bán:</td>
+            <td style="font-weight:bold;color:red;">@String.Format("{0:0,0}",@Model.GIABAN) VNĐ</td>
+        </tr>
+        <tr class="text-left">
+            <td style="text-align:center">
+                <a href="@Url.Action("ThemGioHang", "GioHang", new { @ms = Model.MASP, @strURL = Request.Url.ToString() })"><input type="submit" value="Mua Ngay" class="btn btn-primary" /></a> &nbsp &nbsp &nbsp
+                <a href="@Url.Action("LAPPartial","LAPTOP")"><input type="submit" value="Mua Tiếp" class="btn btn-primary" /></a>
+            </td>
+            
+        </tr>
+    </table>
+</div>

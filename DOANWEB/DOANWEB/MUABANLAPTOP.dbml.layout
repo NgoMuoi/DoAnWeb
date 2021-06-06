@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10.5" name="MUABANLAPTOP">
+  <DataContextMoniker Name="/MUABANLAPTOPDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7c5cc67b-aeff-4f9f-943e-a2d20d33e720" absoluteBounds="6.25, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MUABANLAPTOPDataContext/CHITIETDONHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0ae7311-dbc0-4ee2-ba0f-2f349443e3ac" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6afca2d-8ea0-4b49-9fd5-bc2b62db97ef" absoluteBounds="3.5, 8, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/MUABANLAPTOPDataContext/DONHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5bed964-8334-4743-862b-ead474ba4add" absoluteBounds="3.515, 8.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32fdc02e-e41e-42cd-bbbc-8948f0b40af1" absoluteBounds="0.75, 7.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/MUABANLAPTOPDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcbbb241-b4af-436e-9050-710b7439ea57" absoluteBounds="0.765, 8.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d6a2caf5-a2a3-4a5d-ac83-95a0a6361bb9" absoluteBounds="0.75, 1.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MUABANLAPTOPDataContext/LOAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a8a6220-d59d-4651-9621-ffe1314712b0" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22d29a1f-f325-4cd4-8e98-d9c4408f1e78" absoluteBounds="0.75, 5.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MUABANLAPTOPDataContext/NSX" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ece0050b-3fb7-4d18-8ad5-8847b8997e10" absoluteBounds="0.765, 5.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="22dee444-f457-47c3-a344-e1098b6ae105" absoluteBounds="3.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MUABANLAPTOPDataContext/SANPHAM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f98ea3be-de0f-4ebd-b041-75bfb8811cb2" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.98159912109375); (7.25 : 8.98159912109375); (7.25 : 2.82859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MUABANLAPTOPDataContext/DONHANG/DONHANG_CHITIETDONHANG" />
+      <nodes>
+        <classShapeMoniker Id="b6afca2d-8ea0-4b49-9fd5-bc2b62db97ef" />
+        <classShapeMoniker Id="7c5cc67b-aeff-4f9f-943e-a2d20d33e720" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 8.98159912109375); (3.5 : 8.98159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MUABANLAPTOPDataContext/KHACHHANG/KHACHHANG_DONHANG" />
+      <nodes>
+        <classShapeMoniker Id="32fdc02e-e41e-42cd-bbbc-8948f0b40af1" />
+        <classShapeMoniker Id="b6afca2d-8ea0-4b49-9fd5-bc2b62db97ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.03929768880208); (6.25 : 2.03929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MUABANLAPTOPDataContext/SANPHAM/SANPHAM_CHITIETDONHANG" />
+      <nodes>
+        <classShapeMoniker Id="22dee444-f457-47c3-a344-e1098b6ae105" />
+        <classShapeMoniker Id="7c5cc67b-aeff-4f9f-943e-a2d20d33e720" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MUABANLAPTOPDataContext/LOAI/LOAI_SANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="d6a2caf5-a2a3-4a5d-ac83-95a0a6361bb9" />
+        <classShapeMoniker Id="22dee444-f457-47c3-a344-e1098b6ae105" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.06814697265625); (4.5 : 6.06814697265625); (4.5 : 3.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MUABANLAPTOPDataContext/NSX/NSX_SANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="22d29a1f-f325-4cd4-8e98-d9c4408f1e78" />
+        <classShapeMoniker Id="22dee444-f457-47c3-a344-e1098b6ae105" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="229ab78c-2c2b-4f42-97fa-cd21505a13a8" absoluteBounds="1.125, 3.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MUABANLAPTOPDataContext/KHUYENMAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7b20d20-ad6f-4667-b0e9-78bbaebaf702" absoluteBounds="1.1400000000000001, 3.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

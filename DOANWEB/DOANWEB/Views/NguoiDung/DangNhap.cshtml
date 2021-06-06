@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/SHARE/USERLAYOUT.cshtml";
+}
+
+<h2>Đăng Nhập Tài Khoản</h2>
+
+<table class="table">
+    @using (Html.BeginForm())
+    { 
+        @Html.ValidationSummary(true)
+    <tr class="form-group">
+        <td>Tên Đăng Nhập</td>
+        <td>@Html.TextBox("TAIKHOAN","",new {@class="form-control"})<b style="color:red;">@ViewBag.Loi2</b></td>
+    </tr>
+    <tr class="form-group">
+        <td>Mật Khẩu</td>
+        <td>@Html.Password("MATKHAU","",new {@class="form-control"})<b style="color:red;">@ViewBag.Loi2</b></td>
+    </tr>  
+          
+    <tr class="form-group">
+        <td>           
+        </td>
+        <td>
+            <input type="submit" class="btn btn-danger"  value="ĐĂNG NHẬP" /> <b style="color:red;">@ViewBag.TB</b>
+        </td>
+    </tr>
+    }
+</table>

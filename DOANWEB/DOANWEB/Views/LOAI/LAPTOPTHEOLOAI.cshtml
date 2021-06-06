@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "LAPTOPTHEOLOAI";
+    Layout = "~/Views/SHARE/USERLAYOUT.cshtml";
+}
+
+<h2>LAPTOP THEO NHU CẦU SỬ DỤNG</h2>
+@ViewBag.LAPTOP
+<div class="row">
+    @{
+        foreach (var item in Model)
+        {
+        <div class="col-4">
+            <img src="@Url.Content("~/HinhAnhSP/"+item.HINHANH)" width="70%" height="70%" alt="Image" />
+            @if (item.TENSP.Length > 30)
+            {
+                <p><strong title="@item.TENSP">Laptop @item.TENSP.Substring(0,30)...</strong><br /><a href="@Url.Action("XemChiTiet","LAPTOP",new {@ms=item.MASP})">Xem chi tiết</a></p>
+            }
+            else
+            {
+                <p><strong title="@item.TENSP">Laptop @item.TENSP</strong><br /><a href="@Url.Action("XemChiTiet","LAPTOP",new {@ms=item.MASP})">Xem chi tiết</a></p>
+                <div class="clear"></div>
+            }
+        </div>
+        }       
+      }
+</div>
